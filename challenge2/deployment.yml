@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: my-app
+  name: my-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: my-app-exposed
+  template:
+    metadata:
+      labels:
+        run: my-app-exposed
+    spec:
+      containers:
+      - image: localhost:5000/nginxdemos/hello:latest
+        name: my-app
+        ports:
+        - containerPort: 80
+          protocol: TCP
