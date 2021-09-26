@@ -53,7 +53,3 @@ $ terraform init
 $ terraform plan
 
 $ terraform apply
-
-
-
->>>>>>> c5374b6414c3079bb8ba6fa988a1aa7390ebfdcf
